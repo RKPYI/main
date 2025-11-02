@@ -139,7 +139,7 @@ export default function AboutPage() {
               const Icon = skill.icon;
               return (
                 <motion.div key={skill.title} variants={itemVariants}>
-                  <Card className="h-full hover:shadow-lg transition-shadow">
+                  <Card className="h-full hover:shadow-lg transition-shadow will-change-transform">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-lg bg-primary/10">
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 1.1 + index * 0.1 }}
-                className="relative pl-8 border-l-2 border-primary/30 pb-8 last:pb-0"
+                className="relative pl-8 border-l-2 border-primary/30 pb-8 last:pb-0 will-change-transform"
               >
                 {/* Timeline dot */}
                 <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
@@ -231,6 +231,9 @@ export default function AboutPage() {
                           alt={event.title}
                           fill
                           className="object-contain"
+                          priority={index === 0}
+                          fetchPriority={index === 0 ? "high" : "auto"}
+                          loading={index === 0 ? "eager" : "lazy"}
                         />
                       </div>
                     )}

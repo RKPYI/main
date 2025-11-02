@@ -7,6 +7,12 @@ import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/project-card";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+// Lazy load framer-motion for non-critical animations
+const MotionDiv = dynamic(() => import("framer-motion").then(mod => ({ default: mod.motion.div })), {
+  ssr: false,
+});
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -27,7 +33,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto text-center mb-20"
+        className="max-w-4xl mx-auto text-center mb-20 will-change-transform"
       >
         {/* Profile Image */}
         <motion.div
@@ -45,6 +51,7 @@ export default function Home() {
                 height={128}
                 className="object-cover w-full h-full"
                 priority
+                fetchPriority="high"
               />
             ) : (
               // Fallback during hydration
@@ -103,9 +110,9 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.7 + index * 0.1 }}
-                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
-                className={`p-3 rounded-full border border-primary/20 hover:border-primary/40 transition-all ${social.color}`}
+                className={`p-3 rounded-full border border-primary/20 hover:border-primary/40 transition-all will-change-transform ${social.color}`}
                 aria-label={social.name}
               >
                 <Icon className="h-6 w-6" />

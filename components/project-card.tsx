@@ -21,8 +21,8 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(0,0,0,0.2)" }}
-      className="h-full"
+      whileHover={{ scale: 1.02 }}
+      className="h-full will-change-transform"
     >
       <Card className="h-full flex flex-col overflow-hidden pt-0">
         {/* Project Image - 16:9 Aspect Ratio */}
@@ -32,8 +32,11 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
               src={image}
               alt={title}
               fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
+              className="object-cover transition-transform duration-300 hover:scale-105 will-change-transform"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={index < 2}
+              fetchPriority={index < 2 ? "high" : "auto"}
+              loading={index < 2 ? "eager" : "lazy"}
             />
           </div>
         )}
