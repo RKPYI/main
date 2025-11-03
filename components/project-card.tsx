@@ -27,13 +27,13 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
       whileHover={{ scale: 1.02 }}
       className="h-full will-change-transform"
     >
-      <Card className="h-full flex flex-col overflow-hidden pt-0">
+      <Card className="h-full flex flex-col overflow-hidden pt-0" role="article" aria-labelledby={`project-${index}-title`}>
         {/* Project Image - 16:9 Aspect Ratio */}
         {image && (
           <div className="relative w-full aspect-video overflow-hidden bg-muted">
             <Image
               src={image}
-              alt={title}
+              alt={`${t(title)} project screenshot`}
               fill
               className="object-cover transition-transform duration-300 hover:scale-105 will-change-transform"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -45,15 +45,16 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
         )}
         
         <CardHeader>
-          <CardTitle>{t(title)}</CardTitle>
+          <CardTitle id={`project-${index}-title`}>{t(title)}</CardTitle>
           <CardDescription>{t(description)}</CardDescription>
         </CardHeader>
         <CardContent className="flex-1">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="list" aria-label="Project technologies">
             {tags.map((tag) => (
               <span
                 key={tag}
                 className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
+                role="listitem"
               >
                 {tag}
               </span>
@@ -62,8 +63,13 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
         </CardContent>
         <CardFooter>
           <Button asChild className="w-full">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {t('visit')} <ExternalLink className="ml-2 h-4 w-4" />
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`Visit ${t(title)} project (opens in new tab)`}
+            >
+              {t('visit')} <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
             </a>
           </Button>
         </CardFooter>

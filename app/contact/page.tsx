@@ -108,11 +108,11 @@ export default function ContactPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                 {/* Name Field */}
                 <div className="space-y-2">
                   <Label htmlFor="name" className="flex items-center gap-2">
-                    <User className="h-4 w-4" />
+                    <User className="h-4 w-4" aria-hidden="true" />
                     {t('name')}
                   </Label>
                   <Input
@@ -122,13 +122,18 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
+                    aria-required="true"
+                    aria-describedby="name-description"
                   />
+                  <span id="name-description" className="sr-only">
+                    {t('nameRequired')}
+                  </span>
                 </div>
 
                 {/* Email Field */}
                 <div className="space-y-2">
                   <Label htmlFor="email" className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-4 w-4" aria-hidden="true" />
                     {t('email')}
                   </Label>
                   <Input
@@ -139,13 +144,19 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
+                    aria-required="true"
+                    aria-describedby="email-description"
+                    aria-invalid={formData.email && !formData.email.includes('@') ? 'true' : 'false'}
                   />
+                  <span id="email-description" className="sr-only">
+                    {t('emailRequired')}
+                  </span>
                 </div>
 
                 {/* Message Field */}
                 <div className="space-y-2">
                   <Label htmlFor="message" className="flex items-center gap-2">
-                    <MessageSquare className="h-4 w-4" />
+                    <MessageSquare className="h-4 w-4" aria-hidden="true" />
                     {t('message')}
                   </Label>
                   <Textarea
@@ -156,7 +167,12 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
+                    aria-required="true"
+                    aria-describedby="message-description"
                   />
+                  <span id="message-description" className="sr-only">
+                    {t('messageRequired')}
+                  </span>
                 </div>
 
                 {/* Submit Button */}
@@ -165,10 +181,12 @@ export default function ContactPage() {
                   className="w-full"
                   disabled={isLoading}
                   size="lg"
+                  aria-live="polite"
+                  aria-busy={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
                       {t('sending')}
                     </>
                   ) : (

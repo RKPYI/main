@@ -30,9 +30,9 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="border-b">
+    <nav className="border-b" role="navigation" aria-label="Main navigation">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold" aria-label={t('brand')}>
           {t('brand')}
         </Link>
         <div className="flex items-center gap-6">
@@ -46,17 +46,18 @@ export function Navigation() {
                   ? "text-foreground"
                   : "text-muted-foreground"
               )}
+              aria-current={pathname === item.href ? "page" : undefined}
             >
               {item.label}
             </Link>
           ))}
           {/* Desktop: Show individual buttons */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2" aria-label="Settings">
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
           {/* Mobile: Show menu dropdown */}
-          <div className="md:hidden">
+          <div className="md:hidden" aria-label="Mobile settings menu">
             <MobileMenu />
           </div>
         </div>

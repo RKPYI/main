@@ -7,6 +7,8 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getLocale } from 'next-intl/server';
+import { SkipLink } from '@/components/skip-link';
+import { LiveAnnouncer } from '@/components/live-announcer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -144,8 +146,12 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <SkipLink />
+            <LiveAnnouncer />
             <Navigation />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1" role="main">
+              {children}
+            </main>
             <Footer />
             <Toaster />
           </ThemeProvider>
