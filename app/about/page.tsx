@@ -21,7 +21,7 @@ const timelineEvents = [
   },
   {
     key: 'webtechProvincial',
-    image: "/certificates/webtech.png"
+    image: "/certificates/webtech.webp"
   }
 ];
 
