@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   title: string;
@@ -16,6 +17,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, url, tags, image, index }: ProjectCardProps) {
+  const t = useTranslations('projects');
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,8 +45,8 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
         )}
         
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
+          <CardTitle>{t(title)}</CardTitle>
+          <CardDescription>{t(description)}</CardDescription>
         </CardHeader>
         <CardContent className="flex-1">
           <div className="flex flex-wrap gap-2">
@@ -60,7 +63,7 @@ export function ProjectCard({ title, description, url, tags, image, index }: Pro
         <CardFooter>
           <Button asChild className="w-full">
             <a href={url} target="_blank" rel="noopener noreferrer">
-              Visit <ExternalLink className="ml-2 h-4 w-4" />
+              {t('visit')} <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
         </CardFooter>

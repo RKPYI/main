@@ -8,6 +8,7 @@ import { ProjectCard } from "@/components/project-card";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 
 // Lazy load framer-motion for non-critical animations
 const MotionDiv = dynamic(() => import("framer-motion").then(mod => ({ default: mod.motion.div })), {
@@ -17,6 +18,7 @@ const MotionDiv = dynamic(() => import("framer-motion").then(mod => ({ default: 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { theme, resolvedTheme } = useTheme();
+  const t = useTranslations('home');
   
   // Prevent hydration mismatch
   useEffect(() => {
@@ -69,7 +71,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl md:text-6xl font-bold mb-2 pb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
         >
-          Rangga Danu Kusuma
+          {t('title')}
         </motion.h1>
 
         <motion.p
@@ -78,7 +80,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl md:text-2xl text-muted-foreground mb-6"
         >
-          Full-stack Web Developer
+          {t('subtitle')}
         </motion.p>
 
         {/* Bio */}
@@ -88,8 +90,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
         >
-          I build practical digital solutions — from APIs to full-stack apps — and
-          love experimenting with design, automation, and web systems.
+          {t('bio')}
         </motion.p>
 
         {/* Social Icons */}
@@ -130,7 +131,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-3xl md:text-4xl font-bold mb-8 text-center"
         >
-          Featured Projects
+          {t('featuredProjects')}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

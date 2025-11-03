@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "brand": "RAN"
+  },
+  "home": {
+    "title": "Rangga Danu Kusuma",
+    "subtitle": "Full-stack Web Developer",
+    "bio": "I build practical digital solutions — from APIs to full-stack apps — and love experimenting with design, automation, and web systems.",
+    "featuredProjects": "Featured Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "bio1": "I'm a",
+    "bio1Highlight": "12th-grade high school student from Indonesia",
+    "bio1Continue": "passionate about building practical digital solutions that solve real-world problems.",
+    "bio2": "My journey in web development started with school subject and has grown into a serious pursuit of crafting efficient, scalable applications. I enjoy the entire development process — from designing user interfaces to architecting backend systems.",
+    "bio3": "When I'm not coding, I'm exploring new technologies, reading about system design, or working on automation projects that make life easier. I believe in continuous learning and sharing knowledge with the community.",
+    "whatIDo": "What I Do",
+    "skills": {
+      "backend": {
+        "title": "Backend Development",
+        "description": "Comfortable with Laravel backend development and building robust APIs."
+      },
+      "cloud": {
+        "title": "Cloud Deployment",
+        "description": "Deploy and manage applications using AWS Lightsail and Vercel."
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Passionate about automating workflows and improving efficiency."
+      },
+      "fullstack": {
+        "title": "Full-stack Development",
+        "description": "Building complete web solutions from frontend to backend."
+      }
+    },
+    "techStack": "Tech Stack",
+    "myJourney": "My Journey",
+    "timeline": {
+      "bootcamp": {
+        "title": "Joined UBIG LKS Bootcamp",
+        "date": "December 2024 – January 2025",
+        "description": "Completed an intensive full-stack web development bootcamp. I learned Laravel 11 & React 18"
+      },
+      "internship": {
+        "title": "Started Internship as Full-stack Web Developer",
+        "date": "January 2025 – July 2025",
+        "description": "Worked on Laravel and API development for eSchool SaaS Website."
+      },
+      "webtech1st": {
+        "title": "Web Technology – 1st Place (Mojokerto)",
+        "date": "February 2025",
+        "description": "Earned 1st place in Mojokerto's Web Technology competition — my first real recognition in web development."
+      },
+      "webtechProvincial": {
+        "title": "Web Technology – Provincial Level (Jawa Timur)",
+        "date": "April 2025",
+        "description": "Represented my city at the Jawa Timur provincial level and placed 5th among the best competitors across the region."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a question or want to work together? Feel free to reach out!",
+    "formTitle": "Send Me a Message",
+    "formDescription": "Fill out the form below and I'll get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successToast": "Message sent successfully!",
+    "successDescription": "Thanks for reaching out! I'll get back to you soon.",
+    "errorToast": "Failed to send message",
+    "errorDescription": "Please try again later.",
+    "preferEmail": "Prefer email? You can also reach me directly at:"
+  },
+  "projects": {
+    "rantale": {
+      "title": "Rantale - Web Novel Platform",
+      "description": "A platform for reading and publishing web novels, featuring user-friendly interfaces and powerful tools for authors."
+    },
+    "cryptotip": {
+      "title": "CryptoTip - Crypto Donations",
+      "description": "A decentralized tipping platform that allows users to send and receive crypto donations directly via MetaMask. (Dashboard for tracking donors and amounts - coming soon!)"
+    },
+    "visit": "Visit"
+  },
+  "footer": {
+    "copyright": "© 2025 Rangga Danu Kusuma — Built with Next.js & ShadCN"
+  }
+}

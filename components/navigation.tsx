@@ -4,21 +4,36 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+// Lazy load language switcher to reduce initial bundle
+const LanguageSwitcher = dynamic(
+  () => import("./language-switcher").then(mod => ({ default: mod.LanguageSwitcher })),
+  { ssr: false }
+);
+
+// Lazy load mobile menu
+const MobileMenu = dynamic(
+  () => import("./mobile-menu").then(mod => ({ default: mod.MobileMenu })),
+  { ssr: false }
+);
 
 export function Navigation() {
   const pathname = usePathname();
+  const t = useTranslations('nav');
+  
+  const navItems = [
+    { href: "/", label: t('home') },
+    { href: "/about", label: t('about') },
+    { href: "/contact", label: t('contact') },
+  ];
 
   return (
     <nav className="border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          RAN
+          {t('brand')}
         </Link>
         <div className="flex items-center gap-6">
           {navItems.map((item) => (
@@ -35,7 +50,15 @@ export function Navigation() {
               {item.label}
             </Link>
           ))}
-          <ThemeToggle />
+          {/* Desktop: Show individual buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
+          {/* Mobile: Show menu dropdown */}
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </nav>

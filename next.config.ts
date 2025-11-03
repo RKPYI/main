@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const nextConfig: NextConfig = {
   images: {
@@ -13,8 +16,19 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'next-intl'],
+  },
+  // Optimize bundle size
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Reduce client-side bundle by tree-shaking unused modules
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+      };
+    }
+    return config;
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

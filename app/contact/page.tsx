@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +18,7 @@ export default function ContactPage() {
     email: "",
     message: "",
   });
+  const t = useTranslations('contact');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,8 +39,8 @@ export default function ContactPage() {
         throw new Error(data.error || "Failed to send message");
       }
 
-      toast.success("Message sent successfully!", {
-        description: "Thanks for reaching out! I'll get back to you soon.",
+      toast.success(t('successToast'), {
+        description: t('successDescription'),
       });
 
       // Reset form
@@ -48,8 +50,8 @@ export default function ContactPage() {
         message: "",
       });
     } catch (error) {
-      toast.error("Failed to send message", {
-        description: error instanceof Error ? error.message : "Please try again later.",
+      toast.error(t('errorToast'), {
+        description: error instanceof Error ? error.message : t('errorDescription'),
       });
     } finally {
       setIsLoading(false);
@@ -80,7 +82,7 @@ export default function ContactPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent text-center"
         >
-          Get In Touch
+          {t('title')}
         </motion.h1>
 
         <motion.p
@@ -89,7 +91,7 @@ export default function ContactPage() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-muted-foreground text-center mb-12"
         >
-          Have a question or want to work together? Feel free to reach out!
+          {t('subtitle')}
         </motion.p>
 
         {/* Contact Form */}
@@ -100,9 +102,9 @@ export default function ContactPage() {
         >
           <Card>
             <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
+              <CardTitle>{t('formTitle')}</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you as soon as possible.
+                {t('formDescription')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -111,11 +113,11 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <Label htmlFor="name" className="flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    Name
+                    {t('name')}
                   </Label>
                   <Input
                     id="name"
-                    placeholder="Your name"
+                    placeholder={t('namePlaceholder')}
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -127,12 +129,12 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <Label htmlFor="email" className="flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    Email
+                    {t('email')}
                   </Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your.email@example.com"
+                    placeholder={t('emailPlaceholder')}
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -144,11 +146,11 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <Label htmlFor="message" className="flex items-center gap-2">
                     <MessageSquare className="h-4 w-4" />
-                    Message
+                    {t('message')}
                   </Label>
                   <Textarea
                     id="message"
-                    placeholder="Your message..."
+                    placeholder={t('messagePlaceholder')}
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
@@ -167,10 +169,10 @@ export default function ContactPage() {
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
+                      {t('sending')}
                     </>
                   ) : (
-                    "Send Message"
+                    t('sendButton')
                   )}
                 </Button>
               </form>
@@ -186,7 +188,7 @@ export default function ContactPage() {
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">
-            Prefer email? You can also reach me directly at:
+            {t('preferEmail')}
           </p>
           <a
             href="mailto:romagading@gmail.com"

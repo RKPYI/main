@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "brand": "RAN"
+  },
+  "home": {
+    "title": "Rangga Danu Kusuma",
+    "subtitle": "Pengembang Web Full-stack",
+    "bio": "Saya membangun solusi digital praktis — dari API hingga aplikasi full-stack — dan suka bereksperimen dengan desain, otomatisasi, dan sistem web.",
+    "featuredProjects": "Proyek Unggulan"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "bio1": "Saya adalah",
+    "bio1Highlight": "siswa SMK kelas 12 dari Indonesia",
+    "bio1Continue": "yang bersemangat membangun solusi digital praktis untuk memecahkan masalah di dunia nyata.",
+    "bio2": "Perjalanan saya dalam pengembangan web dimulai dari mata pelajaran sekolah dan telah berkembang menjadi usaha serius untuk membuat aplikasi yang efisien dan skalabel. Saya menikmati seluruh proses pengembangan — dari merancang antarmuka pengguna hingga membangun arsitektur backend.",
+    "bio3": "Ketika tidak sedang coding, saya menjelajahi teknologi baru, membaca tentang desain sistem, atau mengerjakan proyek otomatisasi yang membuat hidup lebih mudah. Saya percaya pada pembelajaran berkelanjutan dan berbagi pengetahuan dengan komunitas.",
+    "whatIDo": "Apa yang Saya Lakukan",
+    "skills": {
+      "backend": {
+        "title": "Pengembangan Backend",
+        "description": "Nyaman dengan pengembangan backend Laravel dan membangun API yang robust."
+      },
+      "cloud": {
+        "title": "Cloud Deployment",
+        "description": "Men-deploy dan mengelola aplikasi menggunakan AWS Lightsail dan Vercel."
+      },
+      "automation": {
+        "title": "Otomatisasi",
+        "description": "Bersemangat tentang mengotomatisasi alur kerja dan meningkatkan efisiensi."
+      },
+      "fullstack": {
+        "title": "Pengembangan Full-stack",
+        "description": "Membangun solusi web lengkap dari frontend hingga backend."
+      }
+    },
+    "techStack": "Teknologi yang Digunakan",
+    "myJourney": "Perjalanan Saya",
+    "timeline": {
+      "bootcamp": {
+        "title": "Bergabung dengan Bootcamp UBIG LKS",
+        "date": "Desember 2024 – Januari 2025",
+        "description": "Menyelesaikan bootcamp pengembangan web full-stack intensif. Saya belajar Laravel 11 & React 18"
+      },
+      "internship": {
+        "title": "Memulai Magang sebagai Pengembang Web Full-stack",
+        "date": "Januari 2025 – Juli 2025",
+        "description": "Bekerja pada pengembangan Laravel dan API untuk Website eSchool SaaS."
+      },
+      "webtech1st": {
+        "title": "Web Technology – Juara 1 (Mojokerto)",
+        "date": "Februari 2025",
+        "description": "Meraih juara 1 dalam kompetisi Web Technology Mojokerto — pengakuan pertama saya yang nyata dalam pengembangan web."
+      },
+      "webtechProvincial": {
+        "title": "Web Technology – Tingkat Provinsi (Jawa Timur)",
+        "date": "April 2025",
+        "description": "Mewakili kota saya di tingkat provinsi Jawa Timur dan meraih peringkat 5 di antara kompetitor terbaik di seluruh wilayah."
+      }
+    }
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "subtitle": "Punya pertanyaan atau ingin bekerja sama? Jangan ragu untuk menghubungi!",
+    "formTitle": "Kirim Pesan",
+    "formDescription": "Isi formulir di bawah ini dan saya akan segera menghubungi Anda kembali.",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "email.anda@contoh.com",
+    "message": "Pesan",
+    "messagePlaceholder": "Pesan Anda...",
+    "sendButton": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "successToast": "Pesan berhasil dikirim!",
+    "successDescription": "Terima kasih telah menghubungi! Saya akan segera menghubungi Anda kembali.",
+    "errorToast": "Gagal mengirim pesan",
+    "errorDescription": "Silakan coba lagi nanti.",
+    "preferEmail": "Lebih suka email? Anda juga bisa menghubungi saya langsung di:"
+  },
+  "projects": {
+    "rantale": {
+      "title": "Rantale - Platform Novel Web",
+      "description": "Platform untuk membaca dan menerbitkan novel web, menampilkan antarmuka yang ramah pengguna dan alat yang powerful untuk penulis."
+    },
+    "cryptotip": {
+      "title": "CryptoTip - Donasi Kripto",
+      "description": "Platform tipping terdesentralisasi yang memungkinkan pengguna mengirim dan menerima donasi kripto langsung melalui MetaMask. (Dashboard untuk melacak donatur dan jumlah - segera hadir!)"
+    },
+    "visit": "Kunjungi"
+  },
+  "footer": {
+    "copyright": "© 2025 Rangga Danu Kusuma — Dibangun dengan Next.js & ShadCN"
+  }
+}
