@@ -1,10 +1,13 @@
 import { MetadataRoute } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-export default function manifest(): MetadataRoute.Manifest {
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const t = await getTranslations('metadata.root');
+  
   return {
-    name: 'Rangga Danu Kusuma - Full-stack Developer',
-    short_name: 'RDK Portfolio',
-    description: 'Personal portfolio of Rangga Danu Kusuma, a full-stack web developer from Indonesia',
+    name: t('manifestName'),
+    short_name: t('manifestShortName'),
+    description: t('manifestDescription'),
     start_url: '/',
     display: 'standalone',
     background_color: '#000000',

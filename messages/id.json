@@ -97,5 +97,36 @@
   },
   "footer": {
     "copyright": "© 2025 Rangga Danu Kusuma — Dibangun dengan Next.js & ShadCN"
+  },
+  "metadata": {
+    "root": {
+      "title": "Rangga Danu Kusuma | Pengembang Full-stack & Siswa",
+      "titleTemplate": "%s | Rangga Danu Kusuma",
+      "description": "Pengembang full-stack dari Indonesia. Membangun solusi web dengan Laravel, Next.js, React, dan AWS.",
+      "keywords": "Rangga Danu Kusuma, Ran, RanDK, RawrDK, Pengembang Full-stack, Pengembang Web Indonesia, Laravel Developer, Next.js Developer, React Developer, AWS Developer, Pengembangan Web, Portofolio, Software Engineer",
+      "ogTitle": "Rangga Danu Kusuma | Pengembang Full-stack & Siswa",
+      "ogDescription": "Pengembang full-stack spesialis Laravel, Next.js, dan teknologi web modern.",
+      "twitterTitle": "Rangga Danu Kusuma | Pengembang Full-stack & Siswa",
+      "twitterDescription": "Pengembang full-stack spesialis Laravel, Next.js, dan teknologi web modern.",
+      "manifestName": "Rangga Danu Kusuma - Pengembang Full-stack",
+      "manifestShortName": "Portofolio RDK",
+      "manifestDescription": "Portofolio Rangga Danu Kusuma, pengembang web full-stack dari Indonesia"
+    },
+    "about": {
+      "title": "Tentang",
+      "description": "Pengembang full-stack dari Indonesia. Siswa kelas 12 berpengalaman di Laravel, Next.js, React, dan AWS. Juara kompetisi Web Technology.",
+      "ogTitle": "Tentang Rangga Danu Kusuma | Pengembang Full-stack",
+      "ogDescription": "Siswa kelas 12 dan pengembang full-stack dari Indonesia. Berpengalaman di Laravel, Next.js, React, dan cloud deployment.",
+      "twitterTitle": "Tentang Rangga Danu Kusuma | Pengembang Full-stack",
+      "twitterDescription": "Siswa kelas 12 dan pengembang full-stack dari Indonesia. Berpengalaman di Laravel, Next.js, React, dan cloud deployment."
+    },
+    "contact": {
+      "title": "Kontak",
+      "description": "Hubungi Rangga Danu Kusuma untuk proyek pengembangan web, peluang kolaborasi, atau pertanyaan teknis.",
+      "ogTitle": "Hubungi Rangga Danu Kusuma | Pengembang Full-stack",
+      "ogDescription": "Hubungi untuk proyek pengembangan web dan peluang kolaborasi.",
+      "twitterTitle": "Hubungi Rangga Danu Kusuma | Pengembang Full-stack",
+      "twitterDescription": "Hubungi untuk proyek pengembangan web dan peluang kolaborasi."
+    }
   }
 }

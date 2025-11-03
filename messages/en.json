@@ -97,5 +97,36 @@
   },
   "footer": {
     "copyright": "© 2025 Rangga Danu Kusuma — Built with Next.js & ShadCN"
+  },
+  "metadata": {
+    "root": {
+      "title": "Rangga Danu Kusuma | Full-stack Developer & Student",
+      "titleTemplate": "%s | Rangga Danu Kusuma",
+      "description": "Full-stack developer from Indonesia. Building web solutions with Laravel, Next.js, React, and AWS.",
+      "keywords": "Rangga Danu Kusuma, Ran, RanDK, RawrDK, Full-stack Developer, Web Developer Indonesia, Laravel Developer, Next.js Developer, React Developer, AWS Developer, Web Development, Portfolio, Software Engineer",
+      "ogTitle": "Rangga Danu Kusuma | Full-stack Developer & Student",
+      "ogDescription": "Full-stack developer specializing in Laravel, Next.js, and modern web technologies.",
+      "twitterTitle": "Rangga Danu Kusuma | Full-stack Developer & Student",
+      "twitterDescription": "Full-stack developer specializing in Laravel, Next.js, and modern web technologies.",
+      "manifestName": "Rangga Danu Kusuma - Full-stack Developer",
+      "manifestShortName": "RDK Portfolio",
+      "manifestDescription": "Portfolio of Rangga Danu Kusuma, full-stack web developer from Indonesia"
+    },
+    "about": {
+      "title": "About",
+      "description": "Full-stack developer from Indonesia. 12th-grade student experienced in Laravel, Next.js, React, and AWS. Web Technology competition winner.",
+      "ogTitle": "About Rangga Danu Kusuma | Full-stack Developer",
+      "ogDescription": "12th-grade student and full-stack developer from Indonesia. Experienced in Laravel, Next.js, React, and cloud deployment.",
+      "twitterTitle": "About Rangga Danu Kusuma | Full-stack Developer",
+      "twitterDescription": "12th-grade student and full-stack developer from Indonesia. Experienced in Laravel, Next.js, React, and cloud deployment."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Rangga Danu Kusuma for web development projects, collaboration opportunities, or technical inquiries.",
+      "ogTitle": "Contact Rangga Danu Kusuma | Full-stack Developer",
+      "ogDescription": "Get in touch for web development projects and collaboration opportunities.",
+      "twitterTitle": "Contact Rangga Danu Kusuma | Full-stack Developer",
+      "twitterDescription": "Get in touch for web development projects and collaboration opportunities."
+    }
   }
 }
