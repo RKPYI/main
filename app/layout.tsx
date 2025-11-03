@@ -9,6 +9,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getLocale } from 'next-intl/server';
 import { SkipLink } from '@/components/skip-link';
 import { LiveAnnouncer } from '@/components/live-announcer';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -154,6 +156,8 @@ export default async function RootLayout({
             </main>
             <Footer />
             <Toaster />
+            <Analytics />
+            <SpeedInsights />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
