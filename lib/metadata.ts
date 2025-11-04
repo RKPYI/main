@@ -47,7 +47,7 @@ export async function getMetadata(page: 'root' | 'about' | 'contact'): Promise<M
         description: t('root.ogDescription'),
         images: [
           {
-            url: '/profile-dark.svg',
+            url: '/banner.png',
             width: 1200,
             height: 630,
             alt: 'Rangga Danu Kusuma - Full-stack Developer',
@@ -59,7 +59,7 @@ export async function getMetadata(page: 'root' | 'about' | 'contact'): Promise<M
         title: t('root.twitterTitle'),
         description: t('root.twitterDescription'),
         creator: '@ranggadanuk',
-        images: ['/profile-dark.svg'],
+        images: ['/banner.png'],
       },
       robots: {
         index: true,

@@ -45,7 +45,7 @@ export default async function RootLayout({
     "@type": "Person",
     name: "Rangga Danu Kusuma",
     url: "https://randk.me",
-    image: "https://randk.me/profile-dark.svg",
+    image: "https://randk.me/banner.png",
     sameAs: ["https://github.com/RKPYI", "https://linkedin.com/in/ranggadanuk"],
     jobTitle: "Full-stack Web Developer",
     worksFor: {
